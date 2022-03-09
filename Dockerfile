@@ -27,4 +27,4 @@ RUN apt-get update && apt-get install -y -t unstable \
     rm -rf /var/lib/apt/lists/*
 
 # install R packages
-RUN R -e "install.packages(c('BiocManager', 'DT', 'rlang', 'shinyjs', 'plotly', 'devtools', 'shinyWidgets', 'sodium', 'shinyBS'), repos='http://cran.rstudio.com/')" -e "BiocManager::install(c('GenomicRanges', 'LOLA', 'IRanges'))" -e "devtools::install_github('databio/simpleCache')" -e "devtools::install_github('databio/GenomicDistributions')" -e "devtools::install_github('tidyverse/ggplot2')" -e "devtools::install_github('databio/shinyqueue')"
+RUN R -e "install.packages(c('BiocManager', 'DT', 'rlang', 'shinyjs', 'plotly', 'devtools', 'shinyWidgets', 'sodium', 'shinyBS','markdown'), repos='http://cran.rstudio.com/')" -e "BiocManager::install(c('GenomicRanges', 'LOLA', 'IRanges'))" -e "devtools::install_github('databio/simpleCache')" -e "devtools::install_github('databio/GenomicDistributions')" -e "devtools::install_github('tidyverse/ggplot2')" -e "devtools::install_github('databio/shinyqueue')" -e "devtools::install_version('shiny', version='1.1.0', repos='http://cran.us.r-project.org')"
