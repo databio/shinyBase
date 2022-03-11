@@ -25,7 +25,7 @@ jobs:
 
       - name: Push :latest image to GHCR
         id: push_ghcr
-        run: docker ghcr.io/databio/shinybase:latest
+        run: docker push ghcr.io/databio/shinybase:latest
 
       - name: Image digest
         run: echo ${{ steps.push_ghcr.outputs.digest }}
